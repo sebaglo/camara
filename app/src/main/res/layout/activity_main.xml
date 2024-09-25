@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Botón para hacer la foto -->
+    <Button
+        android:id="@+id/btnHacerFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HACER FOTO"
+        android:onClick="enviarFotoYNombre"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="50dp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- ImageView para mostrar la imagen -->
+    <ImageView
+        android:id="@+id/Foto"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/foto"
+        android:contentDescription="Vista previa de la foto"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnHacerFoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- EditText para ingresar el nombre de la foto -->
+    <EditText
+        android:id="@+id/ETNombreFoto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la Foto"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/Foto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
